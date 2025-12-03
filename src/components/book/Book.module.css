@@ -1,0 +1,12 @@
+.book {
+  width: 60%;
+  margin: 50px auto;
+}
+.book_image {
+  background-position: center;
+  background-size: cover;
+
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
