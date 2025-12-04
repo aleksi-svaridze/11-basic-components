@@ -2,6 +2,14 @@ import Btn from "../btn/Btn";
 import Styles from "./Book.module.css";
 
 const Book = ({ data }) => {
+  const showData = () => {
+    console.log(`Movie title - ${data.title}`);
+    console.log("---------------------");
+    data.actors.map((actor) => {
+      console.log("Actor - ", actor);
+    });
+  };
+
   return (
     <div className={Styles.book}>
       <div
@@ -17,7 +25,7 @@ const Book = ({ data }) => {
           ))}
         </ul>
       </div>
-      <Btn title={data.title} actors={data.actors} />
+      <Btn showData={() => showData(data.title, data.actors)} />
     </div>
   );
 };
